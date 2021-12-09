@@ -1,0 +1,22 @@
+.unitWrapper {
+  position: relative;
+}
+
+.unit {
+  border-radius: 20%;
+}
+
+.showCharacterId {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: -40%;
+  font-size: 0.8rem;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.unitWrapper:hover .showCharacterId {
+  opacity: 1;
+}

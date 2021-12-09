@@ -1,0 +1,31 @@
+.playerWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 360px;
+  justify-content: center;
+  gap: 20px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+  padding: 1.2rem;
+  margin-bottom: 3rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.playerInfo {
+  align-self: flex-end;
+}
+
+.playerInfo > h1 {
+  font-weight: 300;
+}
+.playerInfo > h2 {
+  font-weight: 300;
+}
+.playerInfo span {
+  font-size: 0.8rem;
+}
+
+.border {
+  border-radius: 30%;
+}

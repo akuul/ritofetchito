@@ -1,0 +1,19 @@
+.traitsWrapper {
+  display: flex;
+  gap: 4px;
+}
+
+.trait {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trait > {
+  position: relative;
+}
+
+.test {
+  position: absolute;
+}
