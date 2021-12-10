@@ -11,16 +11,18 @@ const Traits = ({ traits }) => {
   const allTraits = traits.map((trait, index) => {
     const fillColor =
       trait.style === 0
-        ? '#CD7F32'
+        ? { linearMiddle: '#D28C47', linearSides: '#8f541b', styleId: 'S0' }
         : trait.style === 1
-        ? '#A9A9A9'
+        ? { linearMiddle: '#D3D3D3', linearSides: '#A9A9A9', styleId: 'S1' }
         : trait.style === 2
-        ? '#FFD700'
-        : '';
+        ? { linearMiddle: '#FFD700', linearSides: '#E5C100', styleId: 'S2' }
+        : { linearMiddle: '#FFC0CB', linearSides: '#7DF9FF', styleId: 'S3' };
+
+    console.log(fillColor);
     return (
       <div className={classes.trait} key={index}>
         <div>
-          <TraitSvg fill={fillColor} className={classes.test} />
+          <TraitSvg gradient={fillColor} className={classes.test} />
           <Image
             className={classes.test}
             width={36}

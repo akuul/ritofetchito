@@ -7,8 +7,35 @@ const TraitSvg = (props) => {
       width='36px'
       height='36px'
       viewBox='0 0 36 36'
-      fill={props.fill || 'green'}
+      stroke='black'
+      strokeOpacity='0.1'
+      fill={`url(#${props.gradient.styleId})`}
     >
+      <defs>
+        <linearGradient
+          id={props.gradient.styleId}
+          x1='0%'
+          y1='0%'
+          x2='0%'
+          y2='100%'
+        >
+          <stop
+            offset='0%'
+            stopColor={props.gradient.linearSides}
+            stopOpacity='1'
+          />
+          <stop
+            offset='50%'
+            stopColor={props.gradient.linearMiddle}
+            stopOpacity='1'
+          />
+          <stop
+            offset='100%'
+            stopColor={props.gradient.linearSides}
+            stopOpacity='1'
+          />
+        </linearGradient>
+      </defs>
       <path d='m18 1.16 15 9v15.7l-15 9-15-9V10.14l15-9M18 0l-.52.31-15 9-.48.28v16.82l.48.29 15 9 .52.3.52-.31 15-9 .48-.29V9.59l-.48-.29-15-9L18 0Z' />
       <path d='M18 1.16 3 10.14v15.72l15 8.98 15-8.98V10.14L18 1.16z' />
       <path d='M18 2.89 31.5 11v14L18 33.11 4.5 25V11L18 2.89m0-1.73-15 9v15.7l15 9 15-9V10.14l-15-9Z' />
